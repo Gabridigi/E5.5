@@ -5,26 +5,20 @@ public class App {
         System.out.println("Inserisci la parola");
         String parola=input.nextLine();
         int numerolettere= parola.length();
+        int flag = 0;
 
         if (numerolettere%2==1)
         {
-            String primametà=parola.substring(0, numerolettere/2);
-            String secondametà=parola.substring(numerolettere/2 + 1, numerolettere);
-            if(primametà.equals(secondametà)){
-                System.out.println("Le due metà sono uguali");  
-            }
-            else{System.out.println("Le due metà sono diverse");}
-        }
-        else
-        {
-            String primametà=parola.substring(0, numerolettere/2);
-            String secondametà=parola.substring(numerolettere/2, numerolettere);
-            if(primametà.equals(secondametà)){
-                System.out.println("Le due metà sono uguali");  
-            }
-            else{System.out.println("Le due metà sono diverse");}
+            flag++;
         }
         
-        
+        String primametà=parola.substring(0, numerolettere/2);
+        String secondametà=parola.substring(numerolettere/2 + flag, numerolettere);
+        if(primametà.equals(secondametà)){
+            System.out.println("Le due metà sono uguali");  
+        }
+        else{
+            System.out.println("Le due metà sono diverse");
+        }
     }
 }
